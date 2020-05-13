@@ -7,9 +7,12 @@ trigger:
 - master
 
 pool:
-  name: AKS-AGENT-TEST 
   vmImage: 'ubuntu-latest'
-  
+
+steps:
+- script: |
+    apt-get install java maven
+  displayName: 'Install Java and Maven tool'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
