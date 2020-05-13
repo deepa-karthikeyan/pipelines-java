@@ -11,8 +11,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Bash@3
-  script: |
+- script: |
     # Write your commands here
     apt-get install software-properties-common
     add-apt-repository ppa:openjdk-r/ppa
