@@ -11,13 +11,13 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: |
-    # Write your commands here
-    apt-get install software-properties-common
-    add-apt-repository ppa:openjdk-r/ppa
-    apt-get update
-    apt-get install openjdk-11-jdk
-    apt-get install maven
+# - script: |
+#     # Write your commands here
+#     apt-get install software-properties-common
+#     add-apt-repository ppa:openjdk-r/ppa
+#     apt-get update
+#     apt-get install openjdk-11-jdk
+#     apt-get install maven
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
