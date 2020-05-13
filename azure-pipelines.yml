@@ -10,9 +10,10 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: |
-    apt-get install java maven
-  displayName: 'Install Java and Maven tool'
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
