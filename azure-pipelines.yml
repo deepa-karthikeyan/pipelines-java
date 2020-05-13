@@ -11,6 +11,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script: |
+    apt-get install java
+    apt-get install maven
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
